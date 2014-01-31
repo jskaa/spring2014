@@ -39,7 +39,7 @@ My code was:
 ```
 def reverse(astring):
     bstring = astring[::-1]
-    return astring+bstring
+    return astring+bstring 
 
 print reverse("Pretzel")
 print reverse("Fonzy")
@@ -54,4 +54,34 @@ FonzyyznoF
 MikeekiM
 ```
 
+###Write a function that removes the first occurrence of a string from another string.
+
+My code was:
+
+```
+from test import testEqual
+
+def remove(substring,inputstring):
+    index = inputstring.index(substring)
+    if index < 0: # substr doesn't exist in theStr
+        return inputstring
+    return inputstring[:index] + inputstring[index+len(substring):]
+
+print remove('on', 'Fonzy') 
+print remove('water', 'waterbottle')
+testEqual(remove('an', 'banana'),'bana')
+testEqual(remove('cyc', 'bicycle'), 'bile')
+testEqual(remove('iss', 'Mississippi'), 'Missippi')
+testEqual(remove('egg', 'bicycle'), 'bicycle')
+```
+
+The output was: 
+
+```
+Fzy
+bottle
+Pass
+Pass
+Pass
+```
 
