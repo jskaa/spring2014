@@ -85,3 +85,32 @@ Pass
 Pass
 ```
 
+###Write a function that removes all occurrences of a string from another string
+
+My code was:
+
+```
+from test import testEqual
+
+def remove_all(substring,inputstring):
+    remove_substring = inputstring.replace(substring, "")
+    return remove_substring
+
+print remove_all("app","snappappappi")
+print remove_all("foo","snoofoobloofookoofoo")
+testEqual(remove_all('an', 'banana'), 'ba')
+testEqual(remove_all('cyc', 'bicycle'), 'bile')
+testEqual(remove_all('iss', 'Mississippi'), 'Mippi')
+testEqual(remove_all('eggs', 'bicycle'), 'bicycle')
+```
+
+The output was:
+
+```
+sni
+snooblookoo
+Pass
+Pass
+Pass
+Pass
+```
