@@ -56,6 +56,8 @@ MikeekiM
 
 ###Write a function that removes the first occurrence of a string from another string.
 
+This one was a little tricky to figure out, and I took a peek at the provided answer tab to give myself a hint in what direction I should go. I saw immediately that they used slicing and concatenation together, and I went back to my console to work. What I found was that I could use the ```.index()``` method to find the first occurrence of a parameter (substring) within a string. The index was saved as the variable ```index```, and used in slicing to find the letters in the input string up until but not including the index (which is the substring we want to remove!). The next step was to get rid of the full substring. But what if it was more than a single character? This is where the ```len(substring)``` came in, as when added to the index, it would give an index of where the full substring ended. Then, it was a simple matter of using this as the starting point of the slice, and concatenating it onto the end of the previous portion. 
+
 My code was:
 
 ```
@@ -63,7 +65,7 @@ from test import testEqual
 
 def remove(substring,inputstring):
     index = inputstring.index(substring)
-    if index < 0: # substr doesn't exist in theStr
+    if index < 0: 
         return inputstring
     return inputstring[:index] + inputstring[index+len(substring):]
 
@@ -86,6 +88,8 @@ Pass
 ```
 
 ###Write a function that removes all occurrences of a string from another string
+
+At first, i was trying to edit my code from the previous question in order to answer this. However, after looking online, I found a ```.replace()``` method, which seemed MUCH easier to use. Using ```.replace()```, I could just "replace" all of the substring occurrenes with a blank string, essentially 'deleting' them. 
 
 My code was:
 
@@ -114,3 +118,31 @@ Pass
 Pass
 Pass
 ```
+
+#Lists
+
+###Write a function to count how many odd numbers are in a list.
+
+I knew I needed to use the modulo operator in my code. Once I saw down and wrote out the steps for myself, it was fairly simple to fill in the steps with actual code. 
+
+My code was: 
+
+```
+def count_odd(list):
+    odd_count = 0
+    for i in list:
+        if i % 2 ==1:
+            odd_count += 1
+    return odd_count
+
+print (count_odd([5,8,9,3,1,44,45])) 
+print (count_odd([2,4,6,8,10]))
+```
+
+The output was:
+```
+5
+0
+```
+
+
