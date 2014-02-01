@@ -6,7 +6,7 @@ title: Jessica's Lists and Strings Exercises
 
 #Strings
 
-###Write a function that reverses its string argument
+###Reverse a String Argument
 
 We went over this question in class. I also looked up extended slicing, and found that by omitting a beginning and end in the ```[begin:end:step]``` , by omitting a beginning and end while specifying a step of -1, it will reverse the string. 
 
@@ -30,7 +30,7 @@ yznoF
 ekiM
 ```
 
-###Write a function that mirrors its argument
+###Mirror an Argument
 
 This was the exact same as the last question, but wanted us to concatenate the reverse onto the end of the original string. Doing so was incredibly easy, as it just needed me to make a small tweak by adding the reversed string onto the end of the original.
 
@@ -54,7 +54,7 @@ FonzyyznoF
 MikeekiM
 ```
 
-###Write a function that removes the first occurrence of a string from another string.
+###Remove the First Occurrence of a String from Another String 
 
 This one was a little tricky to figure out, and I took a peek at the provided answer tab to give myself a hint in what direction I should go. I saw immediately that they used slicing and concatenation together, and I went back to my console to work. What I found was that I could use the ```.index()``` method to find the first occurrence of a parameter (substring) within a string. The index was saved as the variable ```index```, and used in slicing to find the letters in the input string up until but not including the index (which is the substring we want to remove!). The next step was to get rid of the full substring. But what if it was more than a single character? This is where the ```len(substring)``` came in, as when added to the index, it would give an index of where the full substring ended. Then, it was a simple matter of using this as the starting point of the slice, and concatenating it onto the end of the previous portion. 
 
@@ -87,7 +87,7 @@ Pass
 Pass
 ```
 
-###Write a function that removes all occurrences of a string from another string
+###Remove All Occurrences of a String from Another String
 
 At first, i was trying to edit my code from the previous question in order to answer this. However, after looking online, I found a ```.replace()``` method, which seemed MUCH easier to use. Using ```.replace()```, I could just "replace" all of the substring occurrenes with a blank string, essentially 'deleting' them. 
 
@@ -121,7 +121,7 @@ Pass
 
 #Lists
 
-###Write a function to count how many odd numbers are in a list.
+###Count the Odd
 
 I knew I needed to use the modulo operator in my code. Once I saw down and wrote out the steps for myself, it was fairly simple to fill in the steps with actual code. 
 
@@ -146,7 +146,7 @@ The output was:
 0
 ```
 
-###Sum up all the even numbers in a list.
+###Sum the even
 
 My code was:
 
@@ -169,7 +169,7 @@ The output was:
 100
 ```
 
-###Sum up all the negative numbers in a list.
+###Sum the negative
 
 My code was:
 
@@ -192,3 +192,32 @@ The output was:
 -127
 ```
 
+###A Mix of Lists and Strings 
+
+My code was:
+
+```
+def replace(s, old, new):
+    list = s.split(old)
+    new_string = new.join(list)
+    return new_string
+
+A = 'I love spom!  Spom is my favorite food.  Spom, spom, spom, yum!'
+
+print replace(A,"om","am")
+print replace(A,"o","a")
+
+B = "I love Fonzy! Fonzy is my favorite. Fonzy Fonzy Fonzy Fonzy!"
+print replace(B,"zy","s")
+print replace(B, "onzy", "loppity")
+```
+
+
+The output was:
+
+```
+I love spam!  Spam is my favorite food.  Spam, spam, spam, yum!
+I lave spam!  Spam is my favarite faad.  Spam, spam, spam, yum!
+I love Fons! Fons is my favorite. Fons Fons Fons Fons!
+I love Floppity! Floppity is my favorite. Floppity Floppity Floppity Floppity!
+```
