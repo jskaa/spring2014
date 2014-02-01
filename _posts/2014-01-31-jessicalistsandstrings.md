@@ -169,5 +169,26 @@ The output was:
 100
 ```
 
+###Sum up all the negative numbers in a list.
 
+My code was:
+
+```
+def sum_negative(list):
+    negative_count = 0
+    for i in list:
+        if i < 0:
+            negative_count += i
+    return negative_count
+
+print(sum_negative([5,-1,-3,4,-8,2,100]))
+print(sum_negative([5,2,6,-88,9,100,-39]))
+```
+
+The output was:
+
+```
+-12
+-127
+```
 
