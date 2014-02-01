@@ -140,9 +140,34 @@ print (count_odd([2,4,6,8,10]))
 ```
 
 The output was:
+
 ```
 5
 0
 ```
+
+###Sum up all the even numbers in a list.
+
+My code was:
+
+```
+def sum_even(list):
+    even_sum = 0
+    for i in list:
+        if i % 2 == 0:
+            even_sum += i
+    return even_sum
+
+print(sum_even([2,6,4,3,10,9]))
+print(sum_even([3,5,22,5,1,78]))
+```
+
+The output was:
+
+```
+22
+100
+```
+
 
 
