@@ -62,7 +62,7 @@ do that for this one, because obviously I don't know how many numbers to get rid
 pretty messy and I scratched that. So, what to do? Well, I went and bothered a programmer friend of mine for some hints.
 He gave me a bit of a hint to create a boolean variable which would either sum or not sum the item at that index based 
 upon it being True or False. Eureka! (or not so much a sudden 'Eureka' as a mistake-filled 10 minutes of trying to think
-through what in the world I was doing. It's much easier when things are verbose! 
+through what in the world I was doing). It's much easier when things are verbose! 
 
 My end code was:
 
