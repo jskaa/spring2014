@@ -31,3 +31,6 @@ It's great having such an available and supporting community though!
 
 Here are the links to my programming meetups!
 
+[PearlHacks (2 part meetup)](https://plus.google.com/109314540901856177049/posts/MTFTAZF6nFg)
+[Raleigh Project Night](https://plus.google.com/109314540901856177049/posts/gEMKDrDoDky)
+
